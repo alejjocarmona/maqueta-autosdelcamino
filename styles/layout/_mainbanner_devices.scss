@@ -1,0 +1,37 @@
+@media (max-width: 767px) {
+   .main_banner {
+
+    .banner_slide {
+        img {
+            display: block;
+        }
+
+        &_content {
+            width: 100%;
+            max-width: none;
+            padding: 0;
+            position: static;
+            transform: none;
+
+            p {
+                padding: 20px;
+                margin: 0;
+            }
+
+            button {
+                margin: 0 0 20px 20px;
+            }
+        }
+    }
+
+    .prev,
+    .next {
+        top: 20%;
+        padding: 4px;
+
+        &:hover {
+            background-color: transparent;
+        }
+    }
+   }
+}

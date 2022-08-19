@@ -1,0 +1,19 @@
+footer {
+    @include dis-flex(space-evenly, flex-start, null);
+    background-color: $main-color;
+    color: $support-color;
+    font-size: 0.75em;
+    padding: 36px;
+
+    ul {
+        width: 30%;
+
+        li {
+            margin-bottom: 12px; 
+        }
+
+        img {
+            max-width: 240px;
+        }
+    }
+}

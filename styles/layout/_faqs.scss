@@ -1,0 +1,73 @@
+/* FAQs styles */
+
+.faqs {
+
+    p,
+    .faqs_questions {
+        padding: 24px;
+        margin: 0 auto;
+    }
+
+    .faqs_questions {
+        @include dis-flex(center, center, column);
+        margin-bottom: 48px;
+
+        /* Dropdown question */
+
+        button {
+            width: 100%;
+            text-align: left;
+            background-color: $secondary-color;
+            color: $main-color;
+            cursor: pointer;
+            padding: 8px 4px;
+            border: 2px solid $main-color;
+            border-bottom: none;
+            outline: none;
+            font-size: 15px;
+            font-weight: $font-subtitles;
+            transition: $fade;
+
+            &:hover {
+                background-color: $function-color;
+                color: $secondary-color;
+            }
+
+            &::after {
+                font-family: "ss-gizmo";
+                content: '\F501';
+                float: right;
+                margin-left: 5px;
+            }
+        }
+
+        .active_terms {
+            background-color: $function-color;
+            color: $secondary-color;
+            border-bottom: 2px solid black;
+
+            &::after {
+                font-family: "ss-gizmo";
+                content: '\F500';
+                float: right;
+                margin-left: 5px;
+            }
+        }
+
+        .panel {
+            border-left: 2px solid $main-color;
+            border-right: 2px solid $main-color;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+
+            &:last-of-type {
+                border-bottom: 2px solid $main-color;
+            }
+
+            p {
+                padding: 12px;
+            }
+        }
+    }
+}

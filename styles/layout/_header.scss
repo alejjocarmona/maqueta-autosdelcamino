@@ -1,0 +1,172 @@
+/* Navigation menu */
+
+.navigation {
+    width: 100%;
+    height: 54px;
+    background-color: $main-color;
+    @include dis-flex(center, center, null);
+
+    .main_logo {
+        width: 15%;
+    }
+
+    /* Menu links */
+
+    &_menu {
+        width: 55%;
+        @include dis-flex(space-evenly, center, null);
+
+        /* dropdown menu */
+
+        .menu_drop {
+            @include hid-content;
+            @include dis-flex(space-around, flex-start, null);
+            width: 100%;
+            height: 0;
+            padding: 24px;
+            background-color: $bg-color;
+            position: absolute;
+            top: 54px;
+            right: 0;
+            left: 0;
+            z-index: 50;
+
+            &:hover {
+                @include show-content;
+                height: auto;
+            }
+
+            &_links {
+                @include dis-flex (space-around, flex-start, column);
+                width: 20%;
+
+                a { 
+                    padding-bottom: 2px;
+                    border-bottom: 2px solid $contrast-color;
+                    margin-bottom: 10px;
+                    color: $contrast-color;
+                    transition: $fade;
+
+                    &:hover {
+                        color: $main-color;
+                        border-color: $function-color;
+                    }
+                }
+            }
+
+            &_car {
+                @include dis-flex (space-evenly, center, center);
+                flex-wrap: wrap;
+                width: 70%;
+
+                a {
+                    width: 30%;
+                    padding: 8px;
+                    transition: $fade;
+                    color: $contrast-color;
+
+                    &:any-link {
+                        color: $contrast-color;
+                    }
+
+                    &:hover {
+                        color: $main-color;
+                    }
+
+                    img {
+                        margin-bottom: 4px;
+                    }
+                }
+            }
+        }
+
+        &_option {
+            display: inline-block;
+            margin: 0 8px;
+            padding: 19px;
+            transition: $fade;
+            position: relative;
+            cursor: pointer;
+
+            .menu_link {
+                transition: $fade;
+            }
+
+            &:any-link {
+                color: $support-color;
+            }
+
+            &:visited,
+            .menu_link:any-link {
+                color: $support-color;
+            }
+
+            &:hover,
+            .menu_link:hover {
+                color: $secondary-color;
+            }
+
+            &:hover~.menu_drop {
+                @include show-content;
+                height: auto;
+            }
+        }
+    }
+
+    /* Search bar */
+
+    &_search {
+        width: 30%;
+        position: relative;
+        padding: 8px;
+        display: flex;
+
+        .icon_search {
+            position: absolute;
+        }
+
+        .icon_search {
+            left: 16px;
+            top: 60%;
+            transform: translateY(-50%);
+        }
+
+        input {
+            padding-left: 28px;
+            margin-right: 4px;
+
+            &:focus {
+                border: 2px solid $bg-color;
+            }
+
+            &:focus~.search_button {
+                @include show-content;
+            }
+        }
+
+        /* Show button when active */
+
+        .search_button {
+            @include hid-content;
+            color: $main-color;
+            background-color: $secondary-color;
+
+            &:hover,
+            &:active,
+            &:focus {
+                color: $secondary-color;
+                background-color: $function-color;
+            }
+        }
+    }
+
+    &_mobile {
+        display: none;
+    }
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+}

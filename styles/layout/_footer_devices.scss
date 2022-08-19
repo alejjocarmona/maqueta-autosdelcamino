@@ -1,0 +1,13 @@
+@media (max-width: 767px) {
+    footer {
+        flex-wrap: wrap;
+        ul {
+            width: 95%;
+            margin: 0 auto;
+
+            img {
+                max-width: 180px;
+            }
+        }
+    }
+}

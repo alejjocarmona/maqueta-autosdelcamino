@@ -1,0 +1,19 @@
+/* Primary buttons general style*/
+
+.primary-btn {
+    border: 0;
+    border-radius: $main-borderradius;
+    padding: 4px 13px;
+    color: $secondary-color;
+    background-color: $main-color;
+    font-size: 13px;
+    font-weight: 900;
+    cursor: pointer;
+    transition: $fade;
+
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: $function-color;
+    }
+}

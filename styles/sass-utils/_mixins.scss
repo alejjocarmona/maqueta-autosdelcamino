@@ -1,0 +1,17 @@
+@mixin dis-flex($jus-cont, $align-items, $flx-dire) {
+    display: flex;
+    justify-content: $jus-cont;
+    align-items: $align-items;
+    flex-direction: $flx-dire;
+}
+
+@mixin hid-content {
+    opacity: 0;
+    visibility: hidden;
+    transition: $fade;
+}
+
+@mixin show-content {
+    opacity: 1;
+    visibility: visible;
+}

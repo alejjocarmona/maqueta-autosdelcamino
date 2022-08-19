@@ -1,0 +1,111 @@
+/* Nav Bar tablets */
+
+@media (max-width: 767px) {
+    .navigation {
+        height: 40px;
+
+        .main_logo,
+        &_menu,
+        &_search {
+            display: none;
+        }
+
+        &_menu {
+            &_option {
+                padding: 8px 0;
+                border-bottom: 2px solid $secondary-color;
+                margin: 0 0 12px 32px;
+            }
+        }
+
+        &_mobile {
+            @include dis-flex(center, center, null);
+            width: 100%;
+
+            &_options {
+                @include dis-flex(center, center, null);
+
+                .main_logo_mobile {
+                    max-width: 160px;
+                    margin: 0 32px;
+                }
+
+                .icon {
+                    margin: 0 8px;
+                    color: $secondary-color;
+                }
+            }
+
+            &_menu {
+                @include hid-content;
+                position: fixed;
+                left: 0;
+                background-color: $main-color;
+                top: 0;
+                bottom: 0;
+                width: 100vw;
+                height: 100vh;
+                z-index: 99999;
+                overflow: hidden;
+                padding-bottom: 56px;
+
+                .top_options {
+                    @include dis-flex(center, center, null);
+                    overflow-x: hidden;
+
+                    img {
+                        max-width: 160px;
+                    }
+
+                    .icon {
+                        color: $secondary-color;
+                    }
+                }
+
+                .bottom_options {
+                    @include dis-flex(flex-start, flex-start, column);
+
+                    .mobile_cars {
+                        color: $secondary-color;
+                    }
+
+                    .active_cars {
+                        border-bottom: 2px solid $function-color;
+                    }
+
+                    .menu_cars_mobile {
+                        max-height: 0;
+                        overflow: hidden;
+                        transition: max-height 0.2s ease-out;
+                        padding: 0;
+                        width: 100%;
+                        background-color: $support-color;
+                        display: flex;
+                        flex-direction: column;
+
+                        a {
+                            padding: 4px 0 8px 32px;
+                        }
+                    }
+
+                    .navigation_searchbar {
+                        width: 80%;
+                        margin: 0 auto;
+                    }
+
+                    .search_button {
+                        width: 40%;
+                        margin: 12px auto;
+                        color: $main-color;
+                        background-color: $bg-color;
+                    }
+                }
+            }
+
+            .active_menu {
+                @include show-content;
+            }
+        }
+
+    }
+}

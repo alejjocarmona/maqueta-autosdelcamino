@@ -1,0 +1,62 @@
+.main_banner {
+    width: 100%;
+    position: relative;
+    margin: auto;
+
+    .banner_slide {
+        position: relative;
+        animation-name: move-slide;
+        animation-duration: 1.5s;
+
+        @keyframes move-slide {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+
+        img {
+            width: 100%;
+        }
+
+        &_content {
+            padding: 20px;
+            position: absolute;
+            width: 25%;
+            max-width: 320px;
+            top: 50%;
+            left: 5%;
+            transform: translateY(-50%);
+            background-color: $support-color;
+
+            p {
+                margin-bottom: 16px;
+            }
+
+            button {
+                font-size: 16px;
+                padding: 13px;
+            }
+        }
+    }
+
+    /* Botones slider */
+    .prev,
+    .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: $secondary-color;
+        transition: $fade;
+
+        &:hover {
+            background-color: $main-color;
+            opacity: 0.5;
+        }
+    }
+    
+    .next {
+        right: 0;
+    }
+}

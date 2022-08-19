@@ -1,0 +1,102 @@
+/* General font */
+
+body {
+    font-family: $main-font;
+    overflow-x: hidden;
+}
+
+/* Icons */
+
+.icon,
+li:before {
+    font-family: "ss-gizmo";
+}
+
+.icon:before {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+footer li:before {
+    font-size: 0.75em;
+    padding-right: 4px;
+}
+
+.icon_search:before {
+    content: "\1F50E";
+}
+
+.icon_right:before,
+footer li:before {
+    content: "\25BB";
+}
+
+.icon_left:before {
+    content: "\25C5";
+}
+
+.icon_plus:before {
+    content: "\002B";
+}
+
+.icon_close:before {
+    content: "\2421";
+}
+
+/* Titles */
+
+h1 {
+    padding: 24px;
+    font-size: 2em;
+    font-weight: $font-titles;
+}
+
+h2 {
+    font-weight: $font-titles;
+    font-size: 1.7em;
+    margin-bottom: 8px;
+}
+
+h3 {
+    font-weight: $font-subtitles;
+    font-size: 1.3em;
+    margin-bottom: 20px;
+}
+
+/* Title size mobile */
+
+@media (max-width: 767px) {
+    h1 {
+        font-size: 1.4em;
+    }
+    
+    h2 {
+        font-size: 1.2em;
+        margin-bottom: 4px;
+    }
+    
+    h3 {
+        font-size: 1em;
+        margin-bottom: 8px;
+    }
+}
+
+/* Text */
+
+p {
+    font-weight: $font-text;
+    font-size: 0.9em;
+}
+
+/* Input  & select style */
+
+input,
+select {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 24px;
+    font-size: 16px;
+    border: 1px solid $support-color;
+    border-radius: $main-borderradius;
+}

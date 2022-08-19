@@ -1,0 +1,25 @@
+/* News section */
+
+.news {
+    background-color: $secondary-color;
+
+    article {
+        @include dis-flex (center, center, null);
+        background-color: $bg-color;
+
+        &:nth-of-type(2) {
+            flex-direction: row-reverse;
+        }
+
+        img,
+        .article_content {
+            width: 50%
+        }
+
+        .article_content {
+            h2, h3, p {
+                padding: 0 50px;
+            }
+        }
+    }
+}

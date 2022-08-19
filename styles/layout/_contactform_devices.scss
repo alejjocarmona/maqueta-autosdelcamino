@@ -1,0 +1,26 @@
+@media (max-width: 767px) {
+    .contact_form {
+        form {
+
+            .client_name,
+            input.mail,
+            .client_extradata,
+            input.form_message {
+                margin-bottom: 12px;
+            }
+
+            .client_extradata {
+                flex-wrap: wrap;
+
+                select {
+                    width: 49.5%;
+                    margin-bottom: 12px;
+                }
+
+                input {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

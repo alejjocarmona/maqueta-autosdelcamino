@@ -1,0 +1,31 @@
+/* Base style */
+
+@import "./base/reset";
+@import "./base/typography";
+
+/* Sass utilities */
+
+@import "./sass-utils/variables";
+@import "./sass-utils/mixins";
+
+/* General theme */
+
+@import "./theme/default-theme";
+
+/* Layout */
+
+@import "./layout/header";
+@import "./layout/header_devices";
+@import "./layout/mainbanner";
+@import "./layout/mainbanner_devices";
+@import "./layout/news";
+@import "./layout/news_devices";
+@import "./layout/faqs";
+@import "./layout/contactform";
+@import "./layout/contactform_devices";
+@import "./layout/footer";
+@import "./layout/footer_devices";
+
+/* Components */
+
+@import "./components/buttons";
